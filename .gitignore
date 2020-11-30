@@ -50,3 +50,9 @@ app.*.map.json
 
 # Lock files
 *.lock
+
+# WebViewer
+/WebViewer
+
+# iOS build
+/ios/build
