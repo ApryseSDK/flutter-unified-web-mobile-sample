@@ -2,6 +2,8 @@
 
 This repo is specifically designed for any users interested in applying PDFTron SDK to Flutter in both web and mobile.
 
+![WebViewer UI](https://www.pdftron.com/downloads/pl/webviewer-ui.png)
+
 ## Initial setup
 
 Before you begin, make sure your development environment has setup based on the official documentation: [install](https://flutter.dev/docs/get-started/install) and [building a web application with Flutter](https://flutter.dev/docs/get-started/web).
