@@ -23,7 +23,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  universal_html: ^1.2.3
   pdftron_flutter:
     git:
       url: git://github.com/PDFTron/pdftron-flutter.git
