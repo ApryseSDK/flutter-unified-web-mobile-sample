@@ -17,10 +17,10 @@ Before you begin, make sure your development environment has setup based on the 
 - Web: install Google Chrome (https://www.google.com/chrome/) if you have not. Then run `flutter run -d chrome`.
 
 - Android:
-Check that your Android device is running by running the command `flutter devices`. If none are available, follow the device set up instructions in the [Install](https://flutter.dev/docs/get-started/install) guides for your platform. Then, run the app with the command `flutter run` or `flutter run -d ` followed by the device id.
+Check that your Android device is running by running the command `flutter devices` or emulators by `flutter emulators`. If none are available, follow the device set up instructions in the [Install](https://flutter.dev/docs/get-started/install) guides for your platform. Then, run the app with the command `flutter run` or `flutter run -d ` followed by the device id.
 
 - iOS:
-Check that your iOS device is running by running the command `flutter devices`. If none are available, follow the device set up instructions in the [Install](https://flutter.dev/docs/get-started/install) guides for your platform. Then, run the app with the command `flutter run` or `flutter run -d ` followed by the device id.
+Check that your iOS device is running by running the command `flutter devices` or emulators by `flutter emulators`. If none are available, follow the device set up instructions in the [Install](https://flutter.dev/docs/get-started/install) guides for your platform. Then, run the app with the command `flutter run` or `flutter run -d ` followed by the device id.
 
 
 ## APIs
