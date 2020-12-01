@@ -6,6 +6,10 @@ import 'dart:html' as html;
 import 'package:myapp/pdfviewer/pdfviewer_interface.dart';
 
 class MyApp extends StatelessWidget implements PDFViewer {
+  final String document;
+
+  MyApp(this.document);
+
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -27,13 +31,14 @@ class MyApp extends StatelessWidget implements PDFViewer {
         // closer together (more dense) than on mobile platforms.
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: MyHomePage(title: 'PDFTron WebViewer for Flutter'),
+      home: MyHomePage(
+          title: 'PDFTron WebViewer for Flutter', document: document),
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+  MyHomePage({Key key, this.title, this.document}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -45,6 +50,7 @@ class MyHomePage extends StatefulWidget {
   // always marked "final".
 
   final String title;
+  final String document;
 
   @override
   _MyHomePageState createState() => _MyHomePageState();
@@ -65,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
         const canvas = document.querySelector("flt-platform-view").shadowRoot.querySelector("#canvas");
         WebViewer({
           path: 'WebViewer/lib',
-          initialDoc: 'https://pdftron.s3.amazonaws.com/downloads/pl/PDFTRON_about.pdf'
+          initialDoc: '${widget.document}'
         }, canvas).then((instance) => {
             // call apis here
         });
@@ -103,4 +109,4 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 }
 
-PDFViewer getPDFViewer() => MyApp();
+PDFViewer getPDFViewer(String document) => MyApp(document);

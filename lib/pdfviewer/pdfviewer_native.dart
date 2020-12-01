@@ -8,6 +8,10 @@ import 'package:pdftron_flutter/pdftron_flutter.dart';
 import 'package:permission_handler/permission_handler.dart';
 
 class MyApp extends StatefulWidget implements PDFViewer {
+  final String document;
+
+  MyApp(this.document);
+
   @override
   _MyAppState createState() => _MyAppState();
 }
@@ -99,4 +103,4 @@ class _MyAppState extends State<MyApp> {
   }
 }
 
-PDFViewer getPDFViewer() => MyApp();
+PDFViewer getPDFViewer(String document) => MyApp(document);
