@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     String document =
-        "https://pdftron.s3.amazonaws.com/downloads/pl/PDFTRON_mobile_about.pdf";
+        "https://pdftron.s3.amazonaws.com/downloads/pl/PDFTRON_about.pdf";
     return PDFViewer(document);
   }
 }
