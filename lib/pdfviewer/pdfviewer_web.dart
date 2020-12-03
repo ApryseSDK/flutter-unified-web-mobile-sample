@@ -5,40 +5,8 @@ import 'dart:html' as html;
 
 import 'package:myapp/pdfviewer/pdfviewer_interface.dart';
 
-class MyApp extends StatelessWidget implements PDFViewer {
-  final String document;
-
-  MyApp(this.document);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'PDFTron Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-        // This makes the visual density adapt to the platform that you run
-        // the app on. For desktop platforms, the controls will be smaller and
-        // closer together (more dense) than on mobile platforms.
-        visualDensity: VisualDensity.adaptivePlatformDensity,
-      ),
-      home: MyHomePage(
-          title: 'PDFTron WebViewer for Flutter', document: document),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title, this.document}) : super(key: key);
+class WebViewer extends StatefulWidget implements PDFViewer {
+  WebViewer(this._document);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -49,14 +17,13 @@ class MyHomePage extends StatefulWidget {
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
 
-  final String title;
-  final String document;
+  final String _document;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _WebViewerState createState() => _WebViewerState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _WebViewerState extends State<WebViewer> {
   String viewID = "webviewer-id";
   html.DivElement _element;
 
@@ -71,7 +38,7 @@ class _MyHomePageState extends State<MyHomePage> {
         const canvas = document.querySelector("flt-platform-view").shadowRoot.querySelector("#canvas");
         WebViewer({
           path: 'WebViewer/lib',
-          initialDoc: '${widget.document}'
+          initialDoc: '${widget._document}'
         }, canvas).then((instance) => {
             // call apis here
         });
@@ -89,24 +56,17 @@ class _MyHomePageState extends State<MyHomePage> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: FractionallySizedBox(
-        widthFactor: 1,
-        heightFactor: 1,
-        child: Container(
-          alignment: Alignment.center,
-          child: HtmlElementView(
-            viewType: viewID,
-          ),
+    return FractionallySizedBox(
+      widthFactor: 1,
+      heightFactor: 1,
+      child: Container(
+        alignment: Alignment.center,
+        child: HtmlElementView(
+          viewType: viewID,
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
 
-PDFViewer getPDFViewer(String document) => MyApp(document);
+PDFViewer getPDFViewer(String document) => WebViewer(document);
