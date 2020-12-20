@@ -6,6 +6,8 @@ import 'dart:html' as html;
 import 'package:myapp/pdfviewer/pdfviewer_interface.dart';
 
 class WebViewer extends StatefulWidget implements PDFViewer {
+  final String _document;
+
   WebViewer(this._document);
 
   // This widget is the home page of your application. It is stateful, meaning
@@ -16,8 +18,6 @@ class WebViewer extends StatefulWidget implements PDFViewer {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
-  final String _document;
 
   @override
   _WebViewerState createState() => _WebViewerState();
