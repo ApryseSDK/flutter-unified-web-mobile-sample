@@ -56,16 +56,20 @@ class _WebViewerState extends State<WebViewer> {
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
-    return FractionallySizedBox(
-      widthFactor: 1,
-      heightFactor: 1,
-      child: Container(
-        alignment: Alignment.center,
-        child: HtmlElementView(
-          viewType: viewID,
+    return Scaffold(
+        appBar: AppBar(
+          title: Text('PDFTron Flutter Demo'),
         ),
-      ),
-    );
+        body: FractionallySizedBox(
+          widthFactor: 1,
+          heightFactor: 1,
+          child: Container(
+            alignment: Alignment.center,
+            child: HtmlElementView(
+              viewType: viewID,
+            ),
+          ),
+        ));
   }
 }
 

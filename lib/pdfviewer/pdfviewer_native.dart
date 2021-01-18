@@ -48,15 +48,14 @@ class _NativeViewerState extends State<NativeViewer> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        width: double.infinity,
-        height: double.infinity,
-        child: DocumentView(
-          onCreated: onDocumentViewCreated,
-        ),
+    return Scaffold(
+        body: Container(
+      width: double.infinity,
+      height: double.infinity,
+      child: DocumentView(
+        onCreated: onDocumentViewCreated,
       ),
-    );
+    ));
   }
 
   void onDocumentViewCreated(DocumentViewController controller) {
@@ -80,7 +79,7 @@ class _NativeViewerState extends State<NativeViewer> {
   }
 
   void showViewer(DocumentViewController controller) {
-    // shows how to disale functionality
+    // shows how to disable functionality
     //  var disabledElements = [Buttons.shareButton, Buttons.searchButton];
     //  var disabledTools = [Tools.annotationCreateLine, Tools.annotationCreateRectangle];
     var config = Config();
