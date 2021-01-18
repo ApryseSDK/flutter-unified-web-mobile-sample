@@ -2,7 +2,7 @@
 
 This repo is specifically designed for any users interested in applying PDFTron SDK to Flutter in both web and mobile.
 
-<img src="https://raw.githubusercontent.com/Maxwell-Yang-PDFTron/flutter-sample/master/demo.png" style="width:95%" title="barcode web"/>
+<img src="demo.png" style="width:95%" title="barcode web"/>
 
 ## Initial setup
 
