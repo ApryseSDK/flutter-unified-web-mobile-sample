@@ -16,7 +16,7 @@ Before you begin, make sure your development environment has setup based on the 
 
 2. Run (install [Google Chrome](https://www.google.com/chrome/) if you have not):
 ```
-flutter run -d chrome
+flutter run
 ```
 
 ### Android
@@ -45,6 +45,11 @@ If none are available, check this [site](https://flutter.dev/docs/get-started/in
 flutter run
 ```
 
+## Guides
+
+- https://www.pdftron.com/documentation/web
+- https://www.pdftron.com/documentation/ios
+- https://www.pdftron.com/documentation/android
 
 ## APIs
 
@@ -55,6 +60,7 @@ See [WebViewer API documentation](https://www.pdftron.com/documentation/web/guid
 ### mobile
 
 See [Flutter API documentation](https://github.com/PDFTron/pdftron-flutter#apis).
+
 ## Contributing
 
 See [contributing](./CONTRIBUTING.md).
@@ -62,4 +68,4 @@ See [contributing](./CONTRIBUTING.md).
 ## License
 
 See [license](./LICENSE).
-![](https://onepixel.pdftron.com/webviewer-flutter-sample)
+![](https://onepixel.pdftron.com/flutter-unified-web-mobile-sample)
