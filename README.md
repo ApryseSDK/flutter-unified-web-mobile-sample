@@ -25,11 +25,11 @@ flutter run -d chrome
 ```
 flutter devices
 ```
-If none are available, check this [site]([Install](https://flutter.dev/docs/get-started/install)) for further instructions.
+If none are available, check this [site](https://flutter.dev/docs/get-started/install) for further instructions.
 
-2. Run (replace ... with your device id):
+2. Run:
 ```
-flutter run -d ...
+flutter run
 ```
 
 ### iOS
@@ -38,11 +38,11 @@ flutter run -d ...
 ```
 flutter devices
 ```
-If none are available, check this [site]([Install](https://flutter.dev/docs/get-started/install)) for further instructions.
+If none are available, check this [site](https://flutter.dev/docs/get-started/install) for further instructions.
 
-2. Run (replace ... with your device id):
+2. Run:
 ```
-flutter run -d ...
+flutter run
 ```
 
 
