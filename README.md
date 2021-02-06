@@ -10,37 +10,42 @@ Before you begin, make sure your development environment has setup based on the 
 
 ## Steps
 
+1. Run:
+```
+flutter pub get
+```
+
 ### Web
 
-1. [Download](https://www.pdftron.com/documentation/web/download/web/) and unzip the WebViewer package, then place it in the root folder.
+2. [Download](https://www.pdftron.com/documentation/web/download/web/) and unzip the WebViewer package, then place it in the root folder.
 
-2. Run (install [Google Chrome](https://www.google.com/chrome/) if you have not):
+3. Run (install [Google Chrome](https://www.google.com/chrome/) if you have not):
 ```
 flutter run
 ```
 
 ### Android
 
-1. Run to check if you have a usable Android device:
+2. Run to check if you have a usable Android device:
 ```
 flutter devices
 ```
 If none are available, check this [site](https://flutter.dev/docs/get-started/install) for further instructions.
 
-2. Run:
+3. Run:
 ```
 flutter run
 ```
 
 ### iOS
 
-1. Run to check if you have a usable iOS device:
+2. Run to check if you have a usable iOS device:
 ```
 flutter devices
 ```
 If none are available, check this [site](https://flutter.dev/docs/get-started/install) for further instructions.
 
-2. Run:
+3. Run:
 ```
 flutter run
 ```
