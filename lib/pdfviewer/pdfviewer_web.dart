@@ -35,7 +35,7 @@ class _WebViewerState extends State<WebViewer> {
       ..id = 'canvas'
       ..append(html.ScriptElement()
         ..text = """
-        const canvas = document.querySelector("flt-platform-view").shadowRoot.querySelector("#canvas");
+        const canvas = document.querySelector("#canvas");
         WebViewer({
           path: 'WebViewer/lib',
           initialDoc: '${widget._document}'
